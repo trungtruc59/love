@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 💌</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="no-scroll">
+
+    <!-- ═══ GATEWAY OVERLAY ═══ -->
+    <div id="gateway">
+        <div class="fog"></div>
+        <div class="gw-sparkles" id="gw-sparkles"></div>
+        <div class="gw-content" id="music-btn">
+            <p class="gw-question" id="gw-question">Cho hỏi em là ?</p>
+            <div class="gw-input-wrap" id="gw-input-wrap">
+                <input type="text" id="crush-name" placeholder="Nhập tên em..." autocomplete="off" maxlength="30">
+            </div>
+            <button id="enter-btn"><span class="shine"></span>Bước vào thế giới của anh ♥</button>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bgm" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <div id="particles-js"></div>
+
+    <!-- ═══ S1: INTRO ═══ -->
+    <section id="intro">
+        <div class="title-wrapper">
+            <h1>Gửi cục cưng!!!🥰 </h1>
+            <p>Anh biết em vẫn đang chờ đợi một thứ nhưng đến giờ em vẫn chưa nhận được! Nhân tiện dịp này anh làm ra món quà nhỏ để tặng em! Mong em thích nó!</p>
+        </div>
+        <div class="scroll-down">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ═══ S2: LETTER ═══ -->
+    <section id="letter">
+        <div id="letter-bokeh-container"></div>
+        <p class="letter-section-title">A Letter For You</p>
+        <div class="envelope-scene">
+            <div class="envelope-wrapper" id="envelope">
+                <div class="env-body"></div>
+                <div class="env-left"></div>
+                <div class="env-right"></div>
+                <div class="env-bottom"></div>
+                <div class="letter-inner" id="letter-content">
+                    <p class="letter-dear">Nè em bé!</p>
+                    <p>Cảm ơn em vì đã xuất hiện.😘</p>
+                    <p>Anh không giỏi nói lời hoa mỹ, cũng chẳng giàu có để mua cho em những món quà đắt tiền,</p>
+                    <p>Được cái anh nhây nhây bựa bựa,😆</p>
+                    <p>Làm được em cười là 1 điểm cộng nhá😘, Nấu ăn cho em +1đ nữa, và yêu em +n điểm.🤣</p>
+                    <p>Hôm nay a sale chính bản thân anh nè🤑. Giá hời lắm đó nha. Nên là a có một câu hỏi muốn hỏi em.🤭</p>
+                    <p>Cuộn xuống tiếp nhé... 🌸</p>
+                </div>
+                <div class="env-seal"></div>
+                <div class="env-flap"></div>
+            </div>
+            <div class="click-hint" id="click-hint">
+                <span class="cursor-icon">👆</span>
+                <span>Bí mật</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ S3: PARTICLE HEART ═══ -->
+    <section id="heart-section">
+        <canvas id="heart-canvas"></canvas>
+        <p class="heart-hint">di chuyển chuột vào đây</p>
+    </section>
+
+    <!-- ═══ S4: OUTRO ═══ -->
+    <section id="outro">
+        <!-- Falling petals background -->
+        <div id="outro-petals"></div>
+
+        <!-- Question popup -->
+        <div class="outro-popup" id="outro-popup">
+            <div class="outro-popup-glow"></div>
+            <h2 class="outro-title">Vậy sau tất cả<br>em có đồng ý làm người yêu anh không?</h2>
+            <div class="outro-emoji">💕</div>
+            <div class="outro-buttons">
+                <button class="btn-yes" id="btn-yes">Đồng ý 💖</button>
+                <button class="btn-no" id="btn-no">Không đồng ý 😤</button>
+            </div>
+        </div>
+
+        <!-- Celebration (hidden until "yes") -->
+        <div class="outro-celebration hidden" id="outro-celebration">
+            <div class="celeb-hearts" id="celeb-hearts"></div>
+            <h2 class="celeb-title" id="celeb-title">Anh yêu em muốn xĩu! 💗</h2>
+            <p class="celeb-sub">Chúc mừng em đã có được anh hahaha 🥰 Love you! Bặc bặc</p>
+            
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
